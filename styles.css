@@ -29,8 +29,9 @@ nav {
 .search-container input {
   padding: 10px;
   border: none;
-  border-radius: 5px;
+  border-radius: 25px; /* Fully rounded corners */
   font-family: 'Tektur', sans-serif;
+  width: 300px; /* Longer search bar */
 }
 
 #theme-toggle {
@@ -61,6 +62,7 @@ nav {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   cursor: pointer;
   transition: transform 0.2s;
+  margin: 10px; /* Added padding to prevent clipping */
 }
 
 .entry-card:hover {
@@ -116,7 +118,11 @@ nav {
 
 .modal-content h2 {
   font-size: 2em;
-  color: #003366;
+  color: #003366; /* Matches grid entry title color */
+}
+
+body.dark-mode .modal-content h2 {
+  color: #66a3ff; /* Matches grid entry title color in dark mode */
 }
 
 .modal-content p {
