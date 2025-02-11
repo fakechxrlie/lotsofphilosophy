@@ -1,0 +1,16 @@
+{
+  "entries": [
+    {
+      "title": "First Entry",
+      "description": "This is my first journal entry.",
+      "date": "October 10, 2023",
+      "entry": "Today, I started working on my public journal website. It feels exciting to share my thoughts with the world!"
+    },
+    {
+      "title": "Second Entry",
+      "description": "Learning web development.",
+      "date": "October 11, 2023",
+      "entry": "I'm learning so much about web development. It's challenging but rewarding!"
+    }
+  ]
+}
