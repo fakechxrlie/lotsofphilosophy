@@ -3,18 +3,24 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Lots of Philosphy</title>
+  <title>Lots of Philosophy</title>
   <link href="https://fonts.googleapis.com/css2?family=Tektur:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
-<body>
+<body class="dark-mode">
   <header>
     <nav>
-      <h1>Lots of Philosphy</h1>
-      <div class="search-container">
-        <input type="text" id="search-bar" placeholder="Search entries...">
+      <h1>Lots of Philosophy</h1>
+      <div class="nav-controls">
+        <div class="search-container">
+          <input type="text" id="search-bar" placeholder="Search entries...">
+        </div>
+        <select id="category-select">
+          <option value="">All Categories</option>
+          <!-- Categories will be dynamically inserted here -->
+        </select>
+        <button id="theme-toggle">Toggle Light Mode</button>
       </div>
-      <button id="theme-toggle">Toggle Dark Mode</button>
     </nav>
   </header>
   <main>
