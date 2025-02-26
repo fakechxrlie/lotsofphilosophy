@@ -3,14 +3,14 @@ body {
   font-family: 'Tektur', sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #f4f4f4;
-  color: #333;
+  background-color: #1a1a1a;
+  color: #f4f4f4;
   transition: background-color 0.3s, color 0.3s;
 }
 
-body.dark-mode {
-  background-color: #1a1a1a;
-  color: #f4f4f4;
+body.light-mode {
+  background-color: #f4f4f4;
+  color: #333;
 }
 
 header {
@@ -24,14 +24,28 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
+}
+
+.nav-controls {
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
 .search-container input {
   padding: 10px;
   border: none;
-  border-radius: 25px; /* Fully rounded corners */
+  border-radius: 25px;
   font-family: 'Tektur', sans-serif;
-  width: 300px; /* Longer search bar */
+  width: 200px;
+}
+
+#category-select {
+  padding: 10px;
+  border: none;
+  border-radius: 25px;
+  font-family: 'Tektur', sans-serif;
 }
 
 #theme-toggle {
@@ -56,13 +70,17 @@ nav {
 }
 
 .entry-card {
-  background: white;
+  background: #333;
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   cursor: pointer;
   transition: transform 0.2s;
-  margin: 10px; /* Added padding to prevent clipping */
+  margin: 10px;
+}
+
+body.light-mode .entry-card {
+  background: white;
 }
 
 .entry-card:hover {
@@ -72,6 +90,10 @@ nav {
 .entry-card h3 {
   margin: 0;
   font-size: 1.5em;
+  color: #66a3ff;
+}
+
+body.light-mode .entry-card h3 {
   color: #003366;
 }
 
@@ -100,12 +122,16 @@ nav {
 }
 
 .modal-content {
-  background: white;
+  background: #333;
   padding: 20px;
   border-radius: 10px;
   max-width: 600px;
   width: 100%;
   position: relative;
+}
+
+body.light-mode .modal-content {
+  background: white;
 }
 
 .close-modal {
@@ -118,29 +144,18 @@ nav {
 
 .modal-content h2 {
   font-size: 2em;
-  color: #003366; /* Matches grid entry title color */
+  color: #66a3ff;
 }
 
-body.dark-mode .modal-content h2 {
-  color: #66a3ff; /* Matches grid entry title color in dark mode */
+body.light-mode .modal-content h2 {
+  color: #003366;
 }
 
 .modal-content p {
   font-size: 1.2em;
+  color: #f4f4f4;
+}
+
+body.light-mode .modal-content p {
   color: #555;
-}
-
-/* Dark Mode Adjustments */
-body.dark-mode .entry-card {
-  background: #333;
-  color: #f4f4f4;
-}
-
-body.dark-mode .entry-card h3 {
-  color: #66a3ff;
-}
-
-body.dark-mode .modal-content {
-  background: #333;
-  color: #f4f4f4;
 }
